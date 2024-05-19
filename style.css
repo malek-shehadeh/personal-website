@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #f0f0f0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+}
+.logo {
+  text-decoration: none;
+  color: darkslateblue;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.logo span {
+  color: #f9004d;
+}
+.navigation a {
+  color: rgb(25, 18, 72);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+}
+.navigation :hover {
+  color: rgb(103, 103, 240);
+}
+section {
+  padding: 100px 200px;
+}
+.main1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/images/emile-perron-xrVDYZRGdw4-unsplash.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main1::after {
+  /* content: ""; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+.main1 h1 {
+  display: block;
+  width: fit-content;
+  font-size: 3em;
+  font-weight: 600;
+  position: relative;
+  color: transparent;
+  /* color: aqua; */
+  animation: text_reveal 3s ease forwards;
+  animation-delay: 1s;
+}
+.main1 h1:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.main1 h1:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.main1 h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+
+.main1 h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+
+.main1 h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+
+.main1 h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+.main1 h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.3s;
+}
+/* 
+.main1 h2 {
+  color: #a16e6e;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.main1 h2 span {
+  display: inline-block;
+  margin: 10px;
+  color: blue;
+  font-size: 3em;
+  font-weight: 600;
+}
+.main1 h3 {
+  color: #f39f9f;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+} */
+.main-btn {
+  display: inline-block;
+
+  color: aqua;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
+}
+.main-btn:hover {
+  background-color: blue;
+  transform: scale(1.1);
+}
+
+/* End Hero Section */
+
+/* media Frames */
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: rgba(24, 2, 2, 0.862);
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: rgb(137, 193, 195);
+    font-weight: 500;
+  }
+}
+
+/* End media Frames */
+
+.social-icons a {
+  /* color: aqua; */
+  font-size: 1.8em;
+  padding-right: 30px;
+}
+/* .title {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: aqua;
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+} */
+
+/* .about {
+  display: grid;
+  /* grid-template-columns: (2, 2fr); */
+/* align-items: center; */
+/* gap: 1.5rem; */
+/* } */
+
+/* New about me */
+
+.about {
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-text h2 {
+  color: cadetblue;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about-text h2 span {
+  color: #555;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* end about me */
+
+.heading1 {
+  /* text-align: center; */
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+  color: red;
+}
+
+/*
+.skills {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+.skills span {
+  color: darkslategray;
+}
+.sec {
+  display: flex;
+  /* flex-direction: row; */
+/* padding-top: 20px; */
+/* width: 100%; */
+/* flex-wrap: wrap; */
+/*}
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 100px;
+}
+.info {
+  margin-left: 50px;
+}
+.bar i {
+  margin-left: 50px;
+}
+.container1 .heading2 {
+  text-decoration: underline;
+  position: relative;
+  left: -70px;
+  color: red;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+} */
+
+/* Skills section styles */
+.skills {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff;
+  padding-left: 50px;
+}
+
+.skills span {
+  color: #333;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container1 {
+  flex: 0 0 45%;
+}
+
+.heading1,
+.heading2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.Technical-bars,
+.radial-bars {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navigation a {
+    margin: 10px 0;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  .main1,
+  .about,
+  .skills {
+    padding: 50px 10px;
+  }
+
+  .container2 {
+    flex-direction: column;
+  }
+
+  .container1 {
+    flex: 1;
+    margin-bottom: 50px;
+  }
+
+  .main1 h1 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .skills h1 {
+    font-size: 2rem;
+  }
+}
